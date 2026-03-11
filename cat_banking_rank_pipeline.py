@@ -2,6 +2,7 @@
 # It is referenced by the ACT2026 submission titled "The Empirical Universal Quotient of Banking APIs:
 # Empirical Category Theory and Complexity Collapse".
 # Copyright 2026 Christopher Doyle
+
 import os
 import re
 import sys
