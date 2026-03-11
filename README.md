@@ -2,7 +2,7 @@
 
 This repository contains the reproducible measurement pipeline and empirical
 datasets for the ACT 2026 conference submission. The title is The 
-Empirical Universal Quotient of Banking APIs Empirical Category Theory and
+Empirical Universal Quotient of Banking APIs: Empirical Category Theory and
 Complexity Collapse.
 
 ## Overview
