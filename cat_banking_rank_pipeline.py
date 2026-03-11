@@ -95,12 +95,12 @@ SPECS = {
         'corpus': 'CDR',
     },
     'PSD2_BERLIN': {
-        'url': 'https://raw.githubusercontent.com/berlin-group/open-banking-oas3/main/psd2-api_1.3.16.yaml',
+        'url': 'https://gitlab.com/the-berlin-group/nextgenpsd2/-/raw/main/Core%20PSD2%20Compliancy/psd2-api_v1.3.16-2025-11-27.openapi.yaml',
+        'local_file': 'psd2-api_v1.3.16-2025-11-27.openapi.yaml',
         'cache': 'cache_psd2_berlin.yaml',
         'label': 'PSD2 Berlin Group',
         'corpus': 'PSD2',
-    }
-}
+    }}
 
 BIAN_YAMLS_DIR = 'bian_yamls_v12'
 
