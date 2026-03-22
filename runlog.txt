@@ -1,0 +1,197 @@
+Cat-Banking Rank Derivation Pipeline — Unified Architecture
+=================================================================
+  [cache] OBIE v3.1 AISP
+    OBIE v3.1 AISP: 29 endpoints
+  [cache] OBIE v3.1 PISP
+    OBIE v3.1 PISP: 41 endpoints
+  [cache] OBIE v3.1 CBPII
+    OBIE v3.1 CBPII: 4 endpoints
+  [cache] OBIE v3.1 VRP
+    OBIE v3.1 VRP: 9 endpoints
+  [cache] AU CDR v1.28 Banking
+    AU CDR v1.28 Banking: 19 endpoints
+  [cache] AU CDR v1.28 Common
+    AU CDR v1.28 Common: 4 endpoints
+  [cache] PSD2 Berlin Group
+    PSD2 Berlin Group: 45 endpoints
+  [cache] BIAN Service Landscape v12.0 (246 files)
+    BIAN total: 4484 endpoints across 246 service domains
+
+============================================================
+CORPUS OBIE
+  Endpoints 83  |  Rank (GF2) 10
+============================================================
+  Dimension coverage
+    A AccountState             20  ##########################
+    T TransactionLog            7  #########
+    P PaymentInstruction       29  #####################################
+    C ConsentRecord            31  ########################################
+    B BeneficiaryRecord         2  ###
+    D DirectDebitMandate        2  ###
+    S StandingOrder            25  ################################
+    Y PartyIdentity             3  ####
+    R ProductDefinition         4  #####
+    F FundsAvailability         8  ##########
+    I ServiceDiscovery          0    *** NOT ACTIVATED ***
+    V SecuritiesPosition        0    *** NOT ACTIVATED ***
+    L CreditFacility            0    *** NOT ACTIVATED ***
+    M MarketPrice               0    *** NOT ACTIVATED ***
+
+  NOT ACTIVATED I, V, L, M
+
+  Gaps (no dimension) 0 / 83 endpoints (0%)
+
+============================================================
+CORPUS CDR
+  Endpoints 23  |  Rank (GF2) 10
+============================================================
+  Dimension coverage
+    A AccountState             16  ##############################
+    T TransactionLog            2  ####
+    P PaymentInstruction        0    *** NOT ACTIVATED ***
+    C ConsentRecord             0    *** NOT ACTIVATED ***
+    B BeneficiaryRecord         2  ####
+    D DirectDebitMandate        3  ######
+    S StandingOrder             3  ######
+    Y PartyIdentity             1  ##
+    R ProductDefinition        21  ########################################
+    F FundsAvailability         0    *** NOT ACTIVATED ***
+    I ServiceDiscovery          9  #################
+    V SecuritiesPosition        1  ##
+    L CreditFacility            1  ##
+    M MarketPrice               0    *** NOT ACTIVATED ***
+
+  NOT ACTIVATED P, C, F, M
+
+  Gaps (no dimension) 0 / 23 endpoints (0%)
+
+============================================================
+CORPUS OBIE u CDR  (Q_retail)
+  Endpoints 106  |  Rank (GF2) 13
+============================================================
+  Dimension coverage
+    A AccountState             36  ########################################
+    T TransactionLog            9  ##########
+    P PaymentInstruction       29  ################################
+    C ConsentRecord            31  ##################################
+    B BeneficiaryRecord         4  ####
+    D DirectDebitMandate        5  ######
+    S StandingOrder            28  ###############################
+    Y PartyIdentity             4  ####
+    R ProductDefinition        25  ############################
+    F FundsAvailability         8  #########
+    I ServiceDiscovery          9  ##########
+    V SecuritiesPosition        1  #
+    L CreditFacility            1  #
+    M MarketPrice               0    *** NOT ACTIVATED ***
+
+  NOT ACTIVATED M
+
+  Gaps (no dimension) 0 / 106 endpoints (0%)
+
+============================================================
+CORPUS PSD2 Berlin Group
+  Endpoints 45  |  Rank (GF2) 11
+============================================================
+  Dimension coverage
+    A AccountState             28  #########################
+    T TransactionLog           14  #############
+    P PaymentInstruction       14  #############
+    C ConsentRecord            27  #########################
+    B BeneficiaryRecord         4  ####
+    D DirectDebitMandate       44  ########################################
+    S StandingOrder            14  #############
+    Y PartyIdentity             3  ###
+    R ProductDefinition        15  ##############
+    F FundsAvailability         1  #
+    I ServiceDiscovery         20  ##################
+    V SecuritiesPosition        5  #####
+    L CreditFacility            0    *** NOT ACTIVATED ***
+    M MarketPrice               0    *** NOT ACTIVATED ***
+
+  NOT ACTIVATED L, M
+
+  Gaps (no dimension) 0 / 45 endpoints (0%)
+
+============================================================
+CORPUS OBIE u CDR u PSD2  (Perturbation)
+  Endpoints 151  |  Rank (GF2) 13
+============================================================
+  Dimension coverage
+    A AccountState             64  ########################################
+    T TransactionLog           23  ##############
+    P PaymentInstruction       43  ###########################
+    C ConsentRecord            58  ####################################
+    B BeneficiaryRecord         8  #####
+    D DirectDebitMandate       49  ###############################
+    S StandingOrder            42  ##########################
+    Y PartyIdentity             7  ####
+    R ProductDefinition        40  #########################
+    F FundsAvailability         9  ######
+    I ServiceDiscovery         29  ##################
+    V SecuritiesPosition        6  ####
+    L CreditFacility            1  #
+    M MarketPrice               0    *** NOT ACTIVATED ***
+
+  NOT ACTIVATED M
+
+  Gaps (no dimension) 0 / 151 endpoints (0%)
+
+============================================================
+PERTURBATION RESULT
+============================================================
+  Rank(PSD2 alone):        11 / 14
+  Rank(Q_retail):          13 / 14  (baseline)
+  Rank(Q_retail u PSD2):   13 / 14
+  Delta:                   +0
+
+
+============================================================
+CORPUS BIAN (wholesale)
+  Endpoints 4484  |  Rank (GF2) 13
+============================================================
+  Dimension coverage
+    A AccountState            445  ################################
+    T TransactionLog          203  ##############
+    P PaymentInstruction      199  ##############
+    C ConsentRecord            70  #####
+    B BeneficiaryRecord         0    *** NOT ACTIVATED ***
+    D DirectDebitMandate       53  ####
+    S StandingOrder            17  #
+    Y PartyIdentity           160  ###########
+    R ProductDefinition       562  ########################################
+    F FundsAvailability        15  #
+    I ServiceDiscovery         13  #
+    V SecuritiesPosition      541  #######################################
+    L CreditFacility          425  ##############################
+    M MarketPrice              16  #
+
+  NOT ACTIVATED B
+
+  Gaps (no dimension) 2155 / 4484 endpoints (48%)
+
+============================================================
+CORPUS OBIE u CDR u BIAN  (Q_full)
+  Endpoints 4590  |  Rank (GF2) 14
+============================================================
+  Dimension coverage
+    A AccountState            481  #################################
+    T TransactionLog          212  ##############
+    P PaymentInstruction      228  ################
+    C ConsentRecord           101  #######
+    B BeneficiaryRecord         4  #
+    D DirectDebitMandate       58  ####
+    S StandingOrder            45  ###
+    Y PartyIdentity           164  ###########
+    R ProductDefinition       587  ########################################
+    F FundsAvailability        23  ##
+    I ServiceDiscovery         22  #
+    V SecuritiesPosition      542  #####################################
+    L CreditFacility          426  #############################
+    M MarketPrice              16  #
+
+  Gaps (no dimension) 2155 / 4590 endpoints (47%)
+Zero Dark Endpoint Verification
+===============================
+Status Verified.
+The retail and regulatory corpora contain zero dark endpoints.
